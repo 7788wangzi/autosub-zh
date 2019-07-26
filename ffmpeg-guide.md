@@ -34,10 +34,30 @@ ffmpeg -i input.mp4 -vn output.mp3
 ffmpeg -ss 00:00:00 -t 00:00:10 -i input.mp4 -s 320x240 -f gif -r 1 output.gif
 ```
 
+### 拼接视频
+
+拼接多个视频，可以将视频写到txt文件中  
+input.txt
+```
+input1.mp4
+input2.mp4
+input3.mp4
+```
+```
+ffmpeg -f concat -safe 0 -i input.txt -an -pix_fmt yuv420p -vcodec h264_videotoolbox -b:v 5400k output_withoutaudio.mp4
+```
+
+添加背景音乐到视频中
+```
+ffmpeg -i output_withoutaudio.mp4 -i input.mp3 -vcodec copy -acodec aac -b:a 128k -map 0:v:0 -map 1:a:0 output_withaudio.mp4
+```
+- `-map 0:v:0`从第一个输入output_withoutaudio.mp4输出视频  
+- `-map 1:a:0`从第二个输入input.mp3输出音频
+
+
 ### 渲染字幕到视频中
 需要注意的是只有MKV格式的容器支持渲染字幕，所以，如果是mp4的视频，需要先转格式到MKV，字幕渲染完成后，再转格式回到mp4。 
 ```
 ffmpeg -i input.mp4 input.mkv
 ffmpeg -i input.mkv -i input.srt output.mkv
-ffmpeg -i output.mkv output.mp4
 ```
