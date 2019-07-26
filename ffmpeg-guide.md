@@ -34,6 +34,12 @@ ffmpeg -i input.mp4 -vn output.mp3
 ffmpeg -ss 00:00:00 -t 00:00:10 -i input.mp4 -s 320x240 -f gif -r 1 output.gif
 ```
 
+### 加速视频
+使用Video filter `-vf`设置视频PTS为原来PTS的7倍 `setpts=1/7*PTS`
+```
+ffmpeg -i input.mp4 -vf "setpts=1/7*PTS" -an -pix_fmt yuv420p -vcodec h264_videotoolbox -b:v 5400k -ss 00:00:00 -t 00:01:00 output.mp4
+```
+
 ### 拼接视频
 
 拼接多个视频，可以将视频写到txt文件中  
