@@ -1,0 +1,1 @@
+C:\Python\python.exe C:\Python\scripts\autosub_app.py -S en -D en %1
