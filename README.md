@@ -64,4 +64,5 @@
     
     验证AutoSub_En.bat加入到SendTo菜单中：
     ![使用示例](media/SendToMenu.png)  
- 
+1. 最终，在video所在目录生成相应的SRT字幕文件。  
+    ![在video所在目录生成相应的SRT字幕文件](media/autosub-Final.PNG)
