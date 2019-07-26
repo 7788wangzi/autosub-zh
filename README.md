@@ -57,5 +57,7 @@
 1. 切换到SendTo目录"%APPDATA%\Microsoft\Windows\SendTo"
 1. 将**AutoSub_En.bat**拷贝到SendTo目录。  
     ![SendTo](media/SendTo.PNG)
+    
+    验证AutoSub_En.bat加入到SendTo菜单中：
     ![使用示例](media/SendToMenu.png)  
  
