@@ -2,7 +2,7 @@
 
 安装包版本：
 - Python 2.7
-- autosub 0.3.12
+- autosub-0.3.12
 
 ### 安装步骤
 1. 下载安装文件。
@@ -51,6 +51,11 @@
 1. 打开Command Prompt，找个视频文件尝试生成字幕文件。
     ```
     C:\Python\python.exe C:\Python\scripts\autosub_app.py -S en -D en "你的视频文件*.mp4"
-    ```
+    ```  
     ![autosub自动生成字幕](media/autosub-run.PNG)
- 2. 
+1. 创建bat文件将autosub放到SendTo菜单中。
+1. 切换到SendTo目录"%APPDATA%\Microsoft\Windows\SendTo"
+1. 将**AutoSub_En.bat**拷贝到SendTo目录。  
+    ![SendTo](media/SendTo.PNG)
+    ![使用示例](media/SendToMenu.png)  
+ 
