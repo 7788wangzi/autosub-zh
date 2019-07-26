@@ -21,6 +21,10 @@
     C:\Python\
     ```
 1. 点击Next直到完成所有安装向导，最后点击Finish。
+1. 拷贝ffmpeg.exe到目录**C:\Python\**。
+    - 解压autosub\installer\ffmpeg.zip
+    - 拷贝解压出的ffmpeg.exe到`C:\Python`  
+    ![拷贝解压出的ffmpeg.exe](media/Python-path.PNG)  
 1. 通过本地**autosub-0.3.12.tar.gz**方式安装autosub。
     ```
     C:\Python\Scripts\pip.exe install "你的路径\autosub\installer\autosub-0.3.12.tar.gz"
