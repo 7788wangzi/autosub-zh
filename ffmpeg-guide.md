@@ -45,12 +45,12 @@ ffmpeg -i input.mp4 -vf "setpts=1/7*PTS" -an -pix_fmt yuv420p -vcodec h264_video
 拼接多个视频，可以将视频写到txt文件中  
 input.txt
 ```
-input1.mp4
-input2.mp4
-input3.mp4
+file 'input1.mp4'
+file 'input2.mp4'
+file 'input3.mp4'
 ```
 ```
-ffmpeg -f concat -safe 0 -i input.txt -an -pix_fmt yuv420p -vcodec h264_videotoolbox -b:v 5400k output_withoutaudio.mp4
+ffmpeg -f concat -safe 0 -i input.txt -c copy output_withoutaudio.mp4
 ```
 
 添加背景音乐到视频中
